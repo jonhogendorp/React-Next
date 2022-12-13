@@ -127,3 +127,28 @@
     filter: invert(1);
   }
 }
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.li{
+  display: block;
+  text-decoration: none;
+  
+}
+
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1{
+  color: white;
+  font-size: 100px ;
+  font-family: Helvetica, sans-serif;
+}
