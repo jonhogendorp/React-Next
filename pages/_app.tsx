@@ -1,12 +1,19 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import Navbar from '../components/Navbar'
+import { AnimatePresence } from "framer-motion";
+import styles from '../styles/Home.module.css'
+import Navbar from '../components/Navbar';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <div>
-      <Navbar/>
-      <Component {...pageProps} />
-    </div>
+
+ function App({ Component, pageProps, router }: AppProps) {
+  return (  
+  <div className={styles.app}>
+    <Navbar/>                                                                                                                                                                  
+    <AnimatePresence mode={"wait"}>
+      <Component key={router.pathname} {...pageProps}/>
+    </AnimatePresence>
+  </div>
   )
 }
+
+export default App;
