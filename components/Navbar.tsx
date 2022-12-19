@@ -11,8 +11,7 @@ export default function Navbar(){
                 </Link>
                 <Link href={"/contact"}>
                     <li className={styles.li}>Contact </li>
-                </Link>
-               
+                </Link>              
             </ul>
         </nav>
     )
